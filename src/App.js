@@ -1,3 +1,5 @@
+// https://github.com/threepointone/glamor/issues/168
+
 import React, { Component } from 'react'
 import BodyStyle from 'body-style'
 import WebfontLoader from '@dr-kobros/react-webfont-loader';
@@ -22,9 +24,9 @@ export default class App extends Component {
                         {data.map(row => {
                             return <Row key={row.id} row={row}>
                                 <Number number={row.values[0]} color="yellow" />
-                                <Chart values={row.values} color="yellow" />
-                                <Number number={row.values[0]} color="orange" />
-                                <Chart values={row.values} color="orange" />
+                                <Chart values={row.values.slice(0,2)} color="yellow" />
+                                <Number number={row.values.reverse()[0]} color="orange" />
+                                <Chart values={row.values.slice(1,3)} color="orange" />
                             </Row>
                         })}
                     </div>
