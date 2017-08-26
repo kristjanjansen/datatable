@@ -13,7 +13,7 @@ class Id extends Component {
         copied: false
     }
 
-    onSuccess() {
+    onSuccess = () => {
         this.setState({ copied: true })
         setTimeout(() => this.setState({ copied: false }), 1000)
     }
@@ -26,7 +26,7 @@ class Id extends Component {
                 style={styles.id}
                 component="div"
                 data-clipboard-text={'bla ' + value}
-                onSuccess={this.onSuccess.bind(this)}
+                onSuccess={this.onSuccess}
             >
                 {copied ? 'Copied' : value}
             </ClipboardButton>
