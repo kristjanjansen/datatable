@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import ClipboardButton from 'react-clipboard.js';
 
 const styles = {
-    id: {
-    }
+    id: {}
 }
 
 class Id extends Component {
