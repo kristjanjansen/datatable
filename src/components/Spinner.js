@@ -5,7 +5,6 @@ import { colors } from '../styles'
 
 const styles = {
     spinner: {
-        width: '1rem',
         color: colors.green
     }
 }
@@ -32,7 +31,9 @@ class Spinner extends Component {
         const { status } = this.props
         const { count } = this.state
         return (
-            <div style={styles.spinner}>{status === 'running' && spinner.frames[count]}</div>
+            <div style={styles.spinner}>
+                {status === 'running' && spinner.frames[count]}
+            </div>
         )
     }
 

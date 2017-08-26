@@ -4,7 +4,6 @@ import { colors } from '../styles'
 
 const styles = {
     number: {
-        width: '2.5rem',
     }
 }
 

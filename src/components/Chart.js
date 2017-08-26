@@ -4,18 +4,12 @@ import { line, area } from 'd3-shape'
 
 import { colors } from '../styles'
 
-const styles = {
-    svg: {
-        margin: '0 1rem 0 0.5rem'
-    }
-}
-
 class Chart extends Component {
 
     render() {
         const { width, height, values, color } = this.props
         return (
-            <svg width={width} height={height} style={styles.svg}>
+            <svg width={width} height={height}>
                 <path d={this.area(values)} fill={colors[color]} opacity="0.15" />
                 <path d={this.line(values)} fill="none" stroke={colors[color]} />
             </svg>

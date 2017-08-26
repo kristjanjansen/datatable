@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
 
 const styles = {
-    row: {
-        display: 'flex',
-        alignItems: 'center'
-    },
-    name: {
-        width: '5rem',
+    td: {
+        padding: '0.35rem'
     }
 }
 
 const Row = ({row, children}) =>
-    <div style={styles.row}>
-        {children}
-    </div>
+    <tr>
+        {React.Children.map(children, child => <td style={styles.td}>{child}</td>)}
+    </tr>
 
 export default Row

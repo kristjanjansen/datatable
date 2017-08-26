@@ -3,7 +3,6 @@ import ClipboardButton from 'react-clipboard.js';
 
 const styles = {
     id: {
-        width: '4.5rem'
     }
 }
 

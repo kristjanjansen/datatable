@@ -4,11 +4,9 @@ import { colors } from '../styles'
 
 const styles = {
     running: {
-        width: '5rem',
         color: colors.green
     },
     done: {
-        width: '5rem',
         color: colors.gray
     }
 }
