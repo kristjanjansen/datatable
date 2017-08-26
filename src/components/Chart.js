@@ -4,7 +4,13 @@ import { line, area } from 'd3-shape'
 
 import { colors } from '../styles'
 
-export default class Chart extends Component {
+const styles = {
+    svg: {
+        margin: '0 1rem 0 0.5rem'
+    }
+}
+
+class Chart extends Component {
 
     render() {
         const { width, height, values, color } = this.props
@@ -54,8 +60,4 @@ Chart.defaultProps = {
     color: 'white'
 }
 
-const styles = {
-    svg: {
-        margin: '0 1rem 0 0.5rem'
-    }
-}
+export default Chart
