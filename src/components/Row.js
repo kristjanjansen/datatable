@@ -6,10 +6,15 @@ export default class Row extends Component {
         const {row, children} = this.props
         return (
             <div style={styles.row}>
+                <div style={styles.name}>{this.generateId()}</div>
                 <div style={styles.name}>{row.name}</div>
                 {children}
             </div>
         )
+    }
+
+    generateId() {
+        return Math.floor(Math.random()*16777215).toString(16);
     }
 
 }
@@ -20,6 +25,6 @@ const styles = {
         alignItems: 'center'
     },
     name: {
-        width: '4rem'
+        width: '5rem',
     }
 }

@@ -2,14 +2,16 @@ import React, { Component } from 'react'
 import { scaleLinear } from 'd3-scale'
 import { line, area } from 'd3-shape'
 
+import { colors } from '../styles'
+
 export default class Chart extends Component {
 
     render() {
-        const { width, height, values } = this.props
+        const { width, height, values, color } = this.props
         return (
-            <svg width={width} height={height}>
-                <path d={this.area(values)} fill="rgba(255,255,255,0.2)" />
-                <path d={this.line(values)} fill="none" stroke="white" />
+            <svg width={width} height={height} style={styles.svg}>
+                <path d={this.area(values)} fill={colors[color]} opacity="0.15" />
+                <path d={this.line(values)} fill="none" stroke={colors[color]} />
             </svg>
         )
     }
@@ -23,7 +25,7 @@ export default class Chart extends Component {
 
     yScale(value) {
         return scaleLinear()
-            .domain([0, 10])
+            .domain([0, 5])
             .range([this.props.height, 0])
             (value)
     }
@@ -47,6 +49,13 @@ export default class Chart extends Component {
 
 Chart.defaultProps = {
     width: 75,
-    height: 20,
-    values: []
+    height: 15,
+    values: [],
+    color: 'white'
+}
+
+const styles = {
+    svg: {
+        margin: '0 1rem 0 0.5rem'
+    }
 }

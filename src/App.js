@@ -21,8 +21,10 @@ export default class App extends Component {
                     <div style={styles.container}>
                         {data.map(row => {
                             return <Row key={row.id} row={row}>
-                                <Number number={row.values[0]} />
-                                <Chart values={row.values} />
+                                <Number number={row.values[0]} color="yellow" />
+                                <Chart values={row.values} color="yellow" />
+                                <Number number={row.values[0]} color="orange" />
+                                <Chart values={row.values} color="orange" />
                             </Row>
                         })}
                     </div>
@@ -44,7 +46,7 @@ const styles = {
         background: '#222',
         color: 'white',
         fontFamily: 'Roboto Mono',
-        lineHeight: '1.5em',
+        lineHeight: '1.75em',
         margin: 0,
         padding: 0,
     },
