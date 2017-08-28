@@ -1,5 +1,5 @@
 {
-    "name": "go3",
+    "name": "table",
     "private": "true",
     "scripts": {
         "dev": "webpack-dev-server --env.dev",
