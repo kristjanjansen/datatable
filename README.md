@@ -2,7 +2,7 @@
 
 ## About
 
-A simple datatable implementation using React
+A simple datatable implementation using React for commandline user experience
 
 ## Installation
 
